@@ -387,7 +387,7 @@ function Test-Operator
     param([Parameter(Mandatory=$true)][String]$Operator)
     # Script scope modifier is not necessary because of read access - but better for readability
     # For the pester script it has to be global???
-    return $Operator -in $Global:Operatorlist
+    return $Operator -in $Script:Operatorlist
 }
 
 <#
@@ -466,7 +466,7 @@ function New-TruthTable
 
             Write-Verbose "Closing Braket"
             $BraketCount--
-            # Offene Variable übernehmen, wenn vorhanden
+            # Offene Variable ï¿½bernehmen, wenn vorhanden
 
             # Ist eine Variable vorhanden?
             if ($InputWord.Length -ne 1)
