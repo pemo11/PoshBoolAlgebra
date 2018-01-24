@@ -6,7 +6,7 @@
 # load the module that contains everything
 using module .\PoshBoolAlgebra.psm1
 
-describe "Conjuntion operations with two opends" {
+describe "Conjuntion operations with two operands" {
 
     it "does a conjunction with A and B - Part I" {
         $wt = New-TruthTable -Formula "A AND B"
@@ -67,7 +67,6 @@ describe "Braket operations" {
         $wt = New-TruthTable -Formula "A AND (B OR C)" -RawValues
         $wt[6,3] | should be $true
     }
-
 }
 
 describe "IMP operations" {
